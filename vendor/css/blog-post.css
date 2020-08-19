@@ -5,4 +5,10 @@
  */
 body {
   padding-top: 56px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #FDFDFD;
+}
+.post-text{
+  font-size: 19px;
+  color: #292929;
 }
