@@ -5,14 +5,14 @@
     <!-- META TAGS -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Bağlı Liste">
-    <meta name="description" content="Tek Yönlü Bağlı Liste">
-    <meta name="description" content="Tek Yönlü Bağlı Liste Java">
-    <meta name="description" content="Bağlı Liste Java">
+    <meta name="description" content="Çift Bağlı Liste">
+    <meta name="description" content="Çift Yönlü Bağlı Liste">
+    <meta name="description" content="Çift Yönlü Bağlı Liste Java">
+    <meta name="description" content="Dinamik Dizi">
     <meta name="author" content="Salih Acur">
     <meta name="author" content="Salih Acr">
     <!-- SİTE TİTLE BLOG İSMİ İCİN SEO -->
-    <title>Bağlı Liste</title>
+    <title>Çift Yönlü Bağlı Liste</title>
 
 
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -45,12 +45,8 @@
             </div>
         </div>
     </nav>
-
-
     <!-- Preview Image -->
     <img class="img-fluid rounded" src="/blog/blog-images/bg-2.jpg" width="100%" alt="">
-
-
     <!-- Page Content -->
     <div class="container">
 
@@ -61,82 +57,85 @@
 
                 <!-- Title -->
                 <strong>
-                    <h2 class="mt-4">Tek Yönlü Bağlı Liste</h2>
+                    <h2 class="mt-4">Çift Yönlü Bağlı Liste</h2>
                 </strong>
 
                 <!-- Author -->
                 <blockquote class="blockquote">
                     <footer class="blockquote-footer"><a href="#">Salih Acur</a>
-                        <cite title="Source Title">tarafından 22 Ağustos 2020 tarihinde yayınlandı.</cite>
+                        <cite title="Source Title">tarafından 29 Ağustos 2020 tarihinde yayınlandı.</cite>
                     </footer>
                 </blockquote>
                 <hr>
 
                 <!-- Post Content -->
-                <h3 class="lead font-weight-bold mb-2">Bağlı Liste (Linked List) Nedir ?</h3>
+                <h3 class="lead font-weight-bold mb-2">Çift Bağlı Liste (Doubly Linked List) Nedir ?</h3>
                 <p>
-                    Bağlı listeler, hafızada elemanları bitişik olarak depolanmayan veri yapısıdır.
-                    Bağlı liste yapısında bulunan her eleman (Düğüm/Node) olarak adlandırılır. Tek yönlü bağlı liste
-                    yapısında bulunan her düğüm iki öğeden oluşmaktadır. Her düğüm içerisinde bulunan değeri ve
-                    kendinden sonraki elemanın nerede olduğu bilgisini depolar.
-                    Bağlı listede bulunan elemanlara erişebilmek için bağlı listenin
-                    ilk elemanının (Baş Düğüm/Head Node) yeri, yapı türünden bir göstericide tutulur.
-                    Bu baş düğüm sayesinde tüm elemanlar üzerinde istenilen işlemler gerçekleştirilebilir.
-                    Bağlı liste üzerinde dolaşmak ve bilgilere ulaşabilmek için boş bir düğüm
-                    (Geçici/Etkin/Şuanki/Dolaşıcı gibi isimler) oluşturulur.
+                    Listedeki elemanlar arasında iki yönlü bağ vardır. Listenin her bir düğümünde iki gösterici
+                    ve veri bölgesi bulunmaktadır. Göstericilerden biri kendisinden önceki elemanın diğeri ise
+                    kendisinden sonraki elemanın adres bilgisini tutar. Bu sayede tek yönlü bağlı listeden farklı olarak
+                    hem listenin sonundan başına doğru hareket edilebilir hemde tek yönlü bağlı listedeki gibi baştan
+                    sona doğru dolaşmak mümkündür. Gerçek hayattan örnek verecek olursam; Televizyon uydularındaki
+                    kanal listesi, telefon rehberleri vb.
                 </p>
-                <li class="font-weight-bold mb-2">Bağlı Listeye Eleman Ekleme</li>
+
+                <li class="font-weight-bold mb-2">Çift Bağlı Listeye Eleman Ekleme</li>
                 <p>
-                    Bağlı listede eleman ekleme işlemi 3 farklı şekilde yapılabilir. Listenin başına, sonuna veya
+                    Çift bağlı listede eleman ekleme işlemi 3 farklı şekilde yapılabilir. Listenin başına, sonuna veya
                     istenilen indexe gibi metotlar yazılarak listeye eleman ekleme işlemi gerçekleştirilir.
                     Listenin başına eleman ekleme işlemi en basit işlemdir, yeni bir düğüm referansı oluşturulur
-                    şuanki başta olan düğüm bir adım ilerletilir (dugum.sonraki), yeni oluşturulan düğüme atama işlemi
-                    yapılır.
-                    Listenin sonuna eleman ekleme işleminde ise işler biraz daha karmaşık oluyor ama araya ekleme
-                    işlemine göre
-                    daha kolay bir yapıdadır. İlk olarak başta düğüm var mı kontrolü yapılır. Baş düğüm boş işe listede
-                    boştur
-                    yani en başa eklenir, değilse geçici bir düğüm referansı ile listenin sonuna kadar gidilir. Şuan
-                    listenin sonunda
-                    olan geçici eleman yardımı ile (gecici.sonraki = dugum;) en sona düğüm ekleme işlemi başarı ile
-                    gerçekleşmiş olur.
-                    Gelelim diğer metodumuza araya eleman ekleme yani belirlediğimiz bir indise eleman ekleyip o indiste
-                    olan eleman
-                    ve peşindeki tüm elemanları kaydırmamız(1 adım ilerletmemiz) lazım. Bir döngü yardımı ile parametre
-                    olarak geçilen
-                    indise kadar ilerleriz sonrasında şuanki düğüme referans olarak geçici düğümü atarız burada
-                    yapacağımız işlem ile
-                    eleman ekleyeceğimiz indisten sonraki elemanları 1 adım ötelemiş (ilerletmiş) oluruz. Merak etmeyin
-                    aşağıda kodlar üzerinden de açıklama mevcut :D
+                    eğer başta düğüm varsa şuanki baş düğümün önceki referansı yeni düğümü işaret etmelidir. Yeni
+                    düğümün
+                    sonraki göstericisi ise bir önceki baş düğümü göstermelidir.
+
+                    Listenin sonuna eleman ekleme işleminde ise şuanda bulunan listenin son elemanın sonraki göstericisi
+                    yeni eklenecek elemanı gösterir. Yeni eklenen elemanın önceki göstericisi az evvelki son elemanı
+                    gösterir,
+                    yeni düğümün sonraki göstericisi ise null(boş) gösterir.
+
+                    İstenilen indise eleman ekleme olayında geçici bir değişken yardımı ile verilen indise kadar
+                    ilerlenir,
+                    o indisin sağındaki tüm elemanlar sağ tarafa doğru bir adım kaydırılır. Araya eklenen elemanın
+                    önceki göstericisi
+                    kendinden bir önceki düğümü, sonraki göstericisi ise yerine geçtiği düğümü işaret eder.
 
                 </p>
-                <li class="font-weight-bold mb-2">Bağlı Listeden Eleman Silme</li>
+                <li class="font-weight-bold mb-2">Çift Bağlı Listeden Eleman Silme</li>
                 <p>
-                    Bağlı listelerde eleman silme işlemi bir çok farklı opsiyon ile yapılabilir. Listenin başından,
+                    Çift bağlı listelerde eleman silme işlemi bir çok farklı opsiyon ile yapılabilir. Listenin başından,
                     sonundan,
                     listenin tamamını, belirli sıradaki elemanı veya seçtiğiniz elemanı gibi silme işlemleri mevcuttur.
-                    Baştan eleman silmede baş düğümün göstericisini kendisi olarak göstererek boşa bırakma işlemi
-                    uygularız.
-                    Belirli bir indisten veri silme işleminde ise döngü yardımı ile parametre olarak girilen indise
-                    kadar ilerleriz
-                    sonrasında bulunduğumuz indisi geçici bir düğümde depolarız. Geçici düğümde olan düğümün
-                    göstericisini boşa düşürürüz.
-                    Belirli bir veriyi silmenin aynı mantıkta olduğunu düşünebiliriz.
+
+                    Baştan eleman silmede, baş düğümün yerine geçecek olan düğümün önceki göstericisini null olarak
+                    değiştiririz.
+
+                    Sondan eleman silmede, sondaki düğümün önceki referansı kaldırılır, yeni oluşacak son düğümün
+                    sonraki referansı null olarak değiştirilir.
+
+                    Aradan eleman silme işleminde ise silinecek indise kadar ilerlenir silinen indisten bir önceki
+                    elemanın sonraki
+                    göstericisi silinecek elemandan bir sonraki elemanı gösterir (simdiki.onceki.sonraki =
+                    simdiki.sonraki). Silinen
+                    indisten bir sonraki elemanın önceki göstericisi ise silinecek elemandan bir önceki elemanı gösterir
+                    (simdiki.sonraki.onceki = simdiki.onceki). Aslında mantık basit silinen düğümün bir önceki düğümün
+                    sonraki göstericisi
+                    silinen düğümün ardındaki düğümü gösterir, silinen düğümden bir sonraki düğümün önceki göstericisi
+                    de silinen düğümden bir önceki elemanı gösterir.
                 </p>
-                <li class="font-weight-bold mb-2">Bağlı Listede Eleman Arama ve Listeleme</li>
+                <li class="font-weight-bold mb-2">Çift Bağlı Listede Eleman Arama ve Listeleme</li>
                 <p>
-                    Bağlı listelerde eleman arama işleminde bir döngü yardımı ile tüm liste dolaşışır şayet dolaşıcı
-                    düğümün
-                    tuttuğu veri ile parametre olan veri eit olana kadar, bu durum sağlandığında elemana ulaşılmış
-                    olunur.
-                    Eleman listeleme işleminde ise dolaşıcı bir düğüm oluştururuz döngü içerisinde her elemanı istenilen
-                    öğelerini
-                    ekrana bastırırız. Burada unutmamamız gereken işlem her adımda dolaşıcı düğümü ilertlemek olduğudur.
+                    Çift yönlü bağlı listelerde dolaşmak adından da anlaşılacağı üzere her iki yönden yapılabilir.
+                    Geçici bir değişken yardımı ile ister baştan sona veya tam tersi bir şekilde elemanlar dolaşılıp
+                    listelenebilir.
+                    Eleman arama ise indise veya özel bir veriye göre yapılabilmektedir. Girilen indis veya veri bazında
+                    kontroller sağlanana kadar liste içinde dolaşılır eşleşme bulunursa, bulunan düğüm geriye
+                    döndürülür.
                 </p>
                 <hr class="bg-danger" />
                 <p>
-                    Bağlı listeler hakkında bir fikriniz oluştuğunu varsayarak, bırak lafı bize kodu göster dediğinizi
-                    duyar gibiyim. Aşağıya Java programlama dili ile yazdığım Bağlı Liste sınıfını ve test sınıfını
+                    Çift Yönlü bağlı listeler hakkında bir fikriniz oluştuğunu varsayarak, bırak lafı bize kodu göster
+                    dediğinizi
+                    duyar gibiyim. Aşağıya Java programlama dili ile yazdığım Çift Bağlı Liste sınıfını ve test sınıfını
                     ekliyorum.
                     Bu kod üzerinde yorum satırları ile açıklamaya çalıştım. Tabikide dersimiz Veri Yapıları olduğu için
                     bu konuda
@@ -145,7 +144,7 @@
                     ben elimden geldiğince yazmaya çalıştım. Umarım sizlere faydalı olmuştur.
                 </p>
                 <hr />
-                <script src="https://gist.github.com/salihacr/488382986e4e30fdcde77c7f22449064.js"></script>
+                <script src="https://gist.github.com/salihacr/0af252243b815a296ed3808b3c1e133d.js"></script>
                 <hr class="bg-danger" />
             </div>
 
@@ -195,11 +194,9 @@
             </div>
             <div class="ml-5 mb-5 mt-5">
                 <h3 class="font-weight-bold mb-4">Kaynaklar</h3>
-                <div><a
-                        href="https://www.interviewbit.com/courses/programming/topics/linked-lists/#:~:text=A%20linked%20list%20is%20a,has%20a%20reference%20to%20null.">https://www.interviewbit.com/.</a>
-                </div>
-                <div><a
-                        href="https://www.geeksforgeeks.org/data-structures/linked-list/">https://www.geeksforgeeks.org</a>
+                <div>
+                    <a
+                        href="https://www.netjstech.com/2019/02/doubly-linked-list-implementation-java.html">https://www.netjstech.com/</a>
                 </div>
             </div>
         </div>
