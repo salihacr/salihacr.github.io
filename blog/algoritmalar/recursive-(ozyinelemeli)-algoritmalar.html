@@ -48,7 +48,7 @@
 
 
     <!-- Preview Image -->
-    <img class="img-fluid rounded" src="/blog/blog-images/bg-2.jpg" width="100%" alt="">
+    <img class="img-fluid rounded" src="/blog/blog-images/bg-2.jpg" width="100%" alt="rekürsif fonksiyonlar">
 
 
     <!-- Page Content -->
@@ -67,7 +67,7 @@
                 <!-- Author -->
                 <blockquote class="blockquote">
                     <footer class="blockquote-footer"><a href="#">Salih Acur</a>
-                        <cite title="Source Title">tarafından 24 Ağustos 2020 tarihinde yayınlandı.</cite>
+                        <cite title="Source Title">tarafından 30 Ağustos 2020 tarihinde yayınlandı.</cite>
                     </footer>
                 </blockquote>
                 <hr>
@@ -82,23 +82,43 @@
 
                 </p>
                 <li class="font-weight-bold mb-2">Özyinelemeli Fonksiyonlar Nasıl Çalışır</li>
-                Özyineleme(recursion) işlemi, problemin kendini tekrar etmesi ile oluşmaktadır peki nasıl tekrar eder ?
-                Özyineleme ile problemler, daha küçük alt parçalara ayrılırlar.
-                Özyineleme işlemi teorik olarak iki adımdan oluşmaktadır. Özyineleme işlemini bitirecek olan durdurma
-                kriteri
-                ve kendi kendini tekrar eden(özyinelenen) kısım. Özyineleme işlemi algoritma çözme stratejilerinden olan
-                parçala ve fethet(divide & conquer)(böl ve yönet olarak da bilinir) metodolojisi ile problemi kendi
-                içinde
-                küçük parçalara ayırır. Bu parçaları kendi içinde diğer parçalardan bağımsız olarak çözümler. Ve
-                sonrasında
-                tüm parçaları birleştirerek problemin çözümüne ulaşılmış olunur.
-                Aşağıdaki kod ve görüntü üzerinden özyinelemeyi anlatacak olursam; durdurma koşuluna kadar her adımda
-                yinelenen fonksiyon her parçada kendi işlemlerini yapar ve bir sonraki adım için kullanılmak üzere
-                sunulur.
+                <p>
+                    Özyineleme(recursion) işlemi, problemin kendini tekrar etmesi ile oluşmaktadır peki nasıl tekrar
+                    eder ?
+                    Özyineleme ile problemler, daha küçük alt parçalara ayrılırlar.
+                    Özyineleme işlemi teorik olarak iki adımdan oluşmaktadır. Özyineleme işlemini bitirecek olan
+                    durdurma
+                    kriteri
+                    ve kendi kendini tekrar eden(özyinelenen) kısım. Özyineleme işlemi algoritma çözme stratejilerinden
+                    olan
+                    parçala ve fethet(divide & conquer)(böl ve yönet olarak da bilinir) metodolojisi ile problemi kendi
+                    içinde
+                    küçük parçalara ayırır. Bu parçaları kendi içinde diğer parçalardan bağımsız olarak çözümler. Ve
+                    sonrasında
+                    tüm parçaları birleştirerek problemin çözümüne ulaşılmış olunur.
+                    Aşağıdaki kod ve görüntü üzerinden özyinelemeyi anlatacak olursam; durdurma koşuluna kadar her
+                    adımda
+                    yinelenen fonksiyon her parçada kendi işlemlerini yapar ve bir sonraki adım için kullanılmak üzere
+                    sunulur.
+                </p>
+                <li class="font-weight-bold mb-2">Özyinelemeli Fonksiyonlar Avantaj ve Dezavantajları</li>
+                <p>
+                    <li>Avantajları</li>
+                <ul>
+                    <p>Rekürsif yöntemlerle daha sade ve düzenli kod yazılması mümkündür.</p>
+                    <p>Rekürsif yöntemlerle karmaşık problemler alt parçalara bölünerek daha kolay çözüme ulaşılır</p>
+                </ul>
+                <li>Dezavantajları</li>
+                <ul>
+                    <p>Anlaşılması zordur, yani rekürsif algoritma hayal etmek uğraştırıcıdır.</p>
+                    <p>Rekürsif yöntemler, hafıza(ram) ve zaman açısından efektif değildir.</p>
+                    <p>Debug edilmesi zordur.</p>
+                </ul>
+                </p>
 
                 <hr class="bg-danger" />
                 <script src="https://gist.github.com/salihacr/552c62ddc3eb1e7e9c1a828b30f29892.js"></script>
-                <img src="/blog/blog-images/recursive-step2.jpg" width="100%">
+                <img src="/blog/blog-images/recursive-step2.jpg" alt="rekürsif fonksiyon mantık" width="100%">
                 <p>
 
                 </p>
@@ -106,16 +126,21 @@
                 <p>
                     Özetle rekürsif(özyinelemeli) fonksiyonlar, kendi kendini tekrar eden problemleri oldukça
                     kolaylaştıran
-                    yapılardır. Aşağıya bir çok problemin özyinelemeli ve iteratif halini ekliyorum. Umarım güzel bir
+                    yapılardır. Bütün doğada özyineleme örnekleri mevcuttur. Formül ezberlemekten daha kolaydır.
+                    Her problemin bir formülü olmayabilir ancak <b>her problem, küçük tekrarlayan adımlar serisi
+                        olarak ifade edilebilir.
+                    </b>
+                    Kesinlikle sonlandırıcı bir şarta sahip olmalıdır.
+                    Aşağıya bir çok problemin özyinelemeli ve iteratif halini ekliyorum. Umarım güzel bir
                     yazı olmuştur.
                     İşinize yaraması dileğiyle...
                 </p>
                 <hr />
-                <script src="https://gist.github.com/salihacr/552c62ddc3eb1e7e9c1a828b30f29892.js"></script>
+                <script src="https://gist.github.com/salihacr/0aaf0e25e59e43278a8a67c5acf35830.js"></script>
                 <hr class="bg-danger" />
             </div>
 
-            <!-- Sidebar Widgets Column -->
+            <!-- BLOG BAŞLIKLAR BÖLÜMÜ -->
             <div class="col-md-4">
                 <br /><br /><br />
                 <!-- Categories Widget -->
@@ -159,6 +184,8 @@
                 </div>
 
             </div>
+
+
             <div class="ml-5 mb-5 mt-5">
                 <h3 class="font-weight-bold mb-4">Kaynaklar</h3>
                 <div>
