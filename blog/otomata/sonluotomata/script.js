@@ -197,7 +197,10 @@ async function runn(east, north) {
         }
     }
     // await icra edilen iş bitirdikten sonra çalıştırılmasını sağlar
-    while (northTrafficState === true && eastTrafficState === true) {
+    while ((northTrafficState === true && eastTrafficState === true)
+        || (currentState === stateArr[0]
+            && northTrafficState === false
+            && eastTrafficState === true)) {
         await runn(eastTrafficState, northTrafficState);
     }
 }
