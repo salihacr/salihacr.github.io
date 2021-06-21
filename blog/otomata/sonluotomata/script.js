@@ -129,38 +129,6 @@ async function runn(east, north) {
                 onLights(stateArr, 2);
                 await sleep(2000);
                 currentState = stateArr[3];
-                if ((currentState === stateArr[3])
-                    && (north === false && east === true)) {
-                    offLights(stateArr, 2);
-                    onLights(stateArr, 3);
-                }
-                if ((currentState === stateArr[3])
-                    && ((north === true && east === true)
-                        || (north === true)
-                        || (north === false && east === false))) {
-                    offLights(stateArr, 2);
-                    onLights(stateArr, 3);
-                    await sleep(5000);
-                    currentState = stateArr[4];
-                    if ((currentState === stateArr[4])) {
-                        offLights(stateArr, 3);
-                        onLights(stateArr, 4);
-                        await sleep(2000);
-                        currentState = stateArr[5];
-                        if (currentState === stateArr[5]) {
-                            offLights(stateArr, 4);
-                            onLights(stateArr, 5);
-                            await sleep(2000);
-                            currentState = stateArr[0];
-                            if ((currentState === stateArr[0])
-                                && ((north === false && east === false)
-                                    || north === true)) {
-                                offLights(stateArr, 5);
-                                onLights(stateArr, 0);
-                            }
-                        }
-                    }
-                }
             }
         }
     }
